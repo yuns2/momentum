@@ -1,5 +1,7 @@
 *{margin:0; padding:0;}
-li{list-style:none;}
+li{
+    list-style:none;
+}
 .btn{
     cursor:pointer;
 }
@@ -35,39 +37,100 @@ body{
     animation: fadeIn .5s linear;
 }
 
+
 /**/
-.js-weather{display:block; margin:0 auto; color:#555;
-    text-align:center;}
-body{display:flex; align-items: center;
-    flex-direction: column; width:100%; height: -webkit-fill-available;;}
-.wrap{margin-top:300px;}
-h1{color:white; font-size: 100px;
-    height:100px;}
-.greetings{color:white; font-size: 40px;}
-input{padding:10px; font-size:14px;}
-.toDoWrap{background-color:rgba(255,255,255,0.7);
-    width:360px; height: 220px; padding:20px; border-radius:10px;}
-.toDo{width:100%; height:100%;
+.align1{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
 }
-.js-toDoList{overflow:scroll; width:100%; height:165px; margin:10px;}
-.js-toDoList li{padding:10px; display: flex; align-items: center;}
-.toDo input{    background-color: transparent;
-    border: none; width:340px; text-align:center;
-    border-bottom: 1px solid #273c75; font-size: 16px;
+body{
+    width:100%; 
+    height: -webkit-fill-available;
+    justify-content: center;
 }
-.js-clock{text-align:center;}
-h4.greetings{text-align:center; margin: 10px;
-    margin-bottom: 30px;}
-    .js-toDoList li span{padding-top:4px;}
+input{
+    padding:10px; 
+    font-size:14px;
+}
+.wrap{
+    width:420px; 
+}
+.js-weather{
+    display:block; 
+    margin:0 auto; 
+    color:#555;
+    text-align:center;
+}
+.js-clock{
+    text-align:center;
+}
+.js-clock h1{
+    color:white; 
+    font-size: 100px;
+    height:100px;
+}
+.js-form input{
+    margin:20px auto; 
+    display:block; 
+    width:280px;
+    text-align:center;
+    background:rgba(255,255,255,0.3);
+    border:none;
+    border-radius:20px;
+    font-size:20px; 
+    margin-bottom:30px;
+}
+.greetings{
+    color:white; 
+    font-size: 40px;
+}
+h4.greetings{
+    text-align:center; 
+    margin: 10px;
+    margin-bottom: 30px;
+}
+.toDoWrap{
+    background-color:rgba(255,255,255,0.7);
+    width:360px; 
+    height: 220px; 
+    padding:20px;
+    border-radius:10px;
+}
+.toDo{
+    width:100%; 
+    height:100%;
+}
+.toDo input{    
+    background-color: transparent;
+    width:340px; 
+    text-align:center;
+    border: none;
+    border-bottom: 1px solid #273c75; 
+    font-size: 16px;
+}
+.js-toDoList{
+    overflow:scroll;
+    height:165px; 
+    margin:10px;
+}
+.js-toDoList li{
+    padding:10px; 
+    display: flex; 
+    align-items: center;
+}
+.js-toDoList li span{
+    padding-top:4px;
+}
 .js-toDoList li button{
     background-color:transparent;
     border:none;
     background-image:url(../img/delete.png);
     background-size:contain;
-    background-repeat: no-repeat;
-    width:19px; height:19px;
+    background-repeat:no-repeat;
+    width:19px; 
+    height:19px;
     margin-left:10px;
 }
-.js-form input{margin:20px auto; display:block; width:280px;
-    text-align:center; background:rgba(255,255,255,0.3); border:none;
-    border-radius:20px; font-size:20px; margin-bottom:30px;}
+
+
