@@ -3,24 +3,21 @@ const toDoForm = document.querySelector('.js-toDoForm'),
     toDoList = document.querySelector('.js-toDoList');
 
 const TODOS_LS = "toDos";
-var toDos = [];
+var toDos = []; 
 
-function saveToDos(){
-    localStorage.setItem(TODOS_LS,JSON.stringify(toDos));
+function saveToDo(){
+    localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
 }
-function deleteToDo(event){
+function deleteToDo(){
     const btn = event.target;
     const li = btn.parentNode;
     toDoList.removeChild(li);
 
-    const cleanToDos = toDos.filter(function(toDo){
+    const cleanToDo = toDos.filter(function(toDo){
         return toDo.id !== parseInt(li.id);
     });
-
-    toDos = cleanToDos;
-    console.log(toDos);
-    const currentToDos = JSON.stringify(toDos);
-    localStorage.setItem(TODOS_LS, currentToDos);
+    toDos = cleanToDo;
+    saveToDo(toDos);
 }
 function handleSubmit(event){
     event.preventDefault();
@@ -28,12 +25,11 @@ function handleSubmit(event){
     paintToDo(currentValue);
     toDoInput.value = "";
 }
-
 function paintToDo(text){
     const li = document.createElement('li');
     const span = document.createElement('span');
     const delBtn = document.createElement('button');
-    delBtn.addEventListener('click',deleteToDo);
+    delBtn.addEventListener('click', deleteToDo);
     const newId = toDos.length + 1;
 
     span.innerText = text;
@@ -42,31 +38,25 @@ function paintToDo(text){
     li.appendChild(delBtn);
     li.id = newId;
     toDoList.appendChild(li);
-    
 
     const toDoObj = {
         id : newId,
         text : text
     }
-
-    toDos.push(toDoObj);
-    saveToDos();
-
+    toDos.push(toDoObj)
+    saveToDo(toDos);
 }
-
 function loadToDos(){
     const loadedToDos = localStorage.getItem(TODOS_LS);
     if(loadedToDos !== null){
-        const parsedToDos = JSON.parse(loadedToDos);
-
+        const parsedToDos = Array.from(JSON.parse(loadedToDos));
         parsedToDos.forEach(function(toDo){
             paintToDo(toDo.text);
-        })
+        });
     }
-}
+};
 function init(){
     loadToDos();
     toDoForm.addEventListener('submit', handleSubmit);
-}
-
+};
 init();

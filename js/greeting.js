@@ -3,37 +3,40 @@ const form = document.querySelector('.js-form'),
     greeting = document.querySelector('.js-greetings'),
     title = document.querySelector('title');
 
-const USER_LS = "currentUser",
-    SHOWING_ON = "showing";
+const USER_LS = "currentUser";
+const SHOWING_ON = "showing";
+
+
 function saveName(text){
     localStorage.setItem(USER_LS, text);
 }
 function handleSubmit(event){
     event.preventDefault();
-    const userName = input.value;
-    saveName(userName);
-    paintGreeting(userName);
-    
+    const currentValue = input.value;
+    saveName(currentValue);
+    paintGreeting(currentValue);
 }
 function askForName(){
     form.classList.add(SHOWING_ON);
-    form.addEventListener('submit',handleSubmit);
+    form.addEventListener('submit', handleSubmit);
 }
 function paintGreeting(name){
     form.classList.remove(SHOWING_ON);
     greeting.classList.add(SHOWING_ON);
     greeting.innerText = `Hello, ${name}`;
-    title.innerText = `Welcome you, ${name}`;
+    title.innerText = `Welcome, ${name}`;
 }
 function loadName(){
-    currentUser = localStorage.getItem(USER_LS);
-    if(currentUser === null){
+    const loadedName = localStorage.getItem(USER_LS);
+    if(loadedName === null){
         askForName();
     }else{
-        paintGreeting(currentUser);
+        paintGreeting(loadedName);
     }
-}
+};
 function init(){
     loadName();
 };
 init();
+
+
