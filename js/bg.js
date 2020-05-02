@@ -1,7 +1,7 @@
 const body = document.querySelector('body');
-function paintImage(ranNum){
+function paintImage(randomNum){
     const image = new Image();
-    image.src = `img/bg${ranNum + 1}.jpg`;
+    image.src = `img/bg${randomNum+1}.jpg`;
     image.classList.add('bgImage');
     body.appendChild(image);
 };
@@ -10,7 +10,7 @@ function genRandom(){
     return randomNumber;
 };
 function init(){
-    const imgNum = genRandom();
-    paintImage(imgNum);
+    const ranNum = genRandom();
+    paintImage(ranNum);
 };
 init();

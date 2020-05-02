@@ -1,143 +1,169 @@
-*{margin:0; padding:0;}
-li{
-    list-style:none;
+* {
+    margin: 0;
+    padding: 0;
 }
-.btn{
-    cursor:pointer;
+
+li {
+    list-style: none;
 }
-body{
-    background-color:#2c3e50;
+
+.btn {
+    cursor: pointer;
+}
+
+body {
+    background-color: #2c3e50;
     transition: color 0.5s ease-in-out;
     animation: fadeIn .5s linear;
-    width:100%; height:100%;
+    width: 100%;
+    height: 100%;
 }
-.clicked{
-    color:#7f8c8d;
+
+.clicked {
+    color: #7f8c8d;
 }
-.form, .greetings{
-    display:none;
+
+.form,
+.greetings {
+    display: none;
 }
+
 .showing {
-    display:block;
+    display: block;
 }
-@keyframes fadeIn{
-    from{
-        opacity:0;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    to{
-        opacity:1;
+
+    to {
+        opacity: 1;
     }
 }
-/*
-.bgImage{
+
+.bgImage {
     position: absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    z-index:-1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     animation: fadeIn .5s linear;
 }
-*/
 
 /**/
-.align1{
-    display:flex;
+.align1 {
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
-body{
-    width:100%; 
+
+body {
+    width: 100%;
     height: -webkit-fill-available;
     justify-content: center;
     background-image: url(https://source.unsplash.com/random);
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
-input{
-    padding:10px; 
-    font-size:14px;
+
+input {
+    padding: 10px;
+    font-size: 14px;
 }
-.wrap{
-    width:420px; 
+
+.wrap {
+    width: 420px;
 }
-.js-weather{
-    display:block; 
-    margin:0 auto; 
-    color:#555;
-    text-align:center;
+
+.js-weather {
+    display: block;
+    margin: 0 auto;
+    color: #555;
+    text-align: center;
 }
-.js-clock{
-    text-align:center;
+
+.js-clock {
+    text-align: center;
 }
-.js-clock h1{
-    color:white; 
+
+.js-clock h1 {
+    color: white;
     font-size: 100px;
-    height:100px;
+    height: 100px;
 }
-.js-form input{
-    margin:20px auto; 
-    display:block; 
-    width:280px;
-    text-align:center;
-    background:rgba(255,255,255,0.3);
-    border:none;
-    border-radius:20px;
-    font-size:20px; 
-    margin-bottom:30px;
+
+.js-form input {
+    margin: 20px auto;
+    display: block;
+    width: 280px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-bottom: 30px;
 }
-.greetings{
-    color:white; 
+
+.greetings {
+    color: white;
     font-size: 40px;
 }
-h4.greetings{
-    text-align:center; 
+
+h4.greetings {
+    text-align: center;
     margin: 10px;
     margin-bottom: 30px;
 }
-.toDoWrap{
-    background-color:rgba(255,255,255,0.7);
-    width:360px; 
-    height: 220px; 
-    padding:20px;
-    border-radius:10px;
+
+.toDoWrap {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 360px;
+    height: 220px;
+    padding: 20px;
+    border-radius: 10px;
 }
-.toDo{
-    width:100%; 
-    height:100%;
+
+.toDo {
+    width: 100%;
+    height: 100%;
 }
-.toDo input{    
+
+.toDo input {
     background-color: transparent;
-    width:340px; 
-    text-align:center;
+    width: 340px;
+    text-align: center;
     border: none;
-    border-bottom: 1px solid #273c75; 
+    border-bottom: 1px solid #273c75;
     font-size: 16px;
 }
-.js-toDoList{
-    overflow:scroll;
-    height:165px; 
-    margin:10px;
+
+.js-toDoList {
+    overflow: scroll;
+    height: 165px;
+    margin: 10px;
 }
-.js-toDoList li{
-    padding:10px; 
-    display: flex; 
+
+.js-toDoList li {
+    padding: 10px;
+    display: flex;
     align-items: center;
 }
-.js-toDoList li span{
-    padding-top:4px;
-}
-.js-toDoList li button{
-    background-color:transparent;
-    border:none;
-    background-image:url(../img/delete.png);
-    background-size:contain;
-    background-repeat:no-repeat;
-    width:19px; 
-    height:19px;
-    margin-left:10px;
+
+.js-toDoList li span {
+    padding-top: 4px;
 }
 
-
+.js-toDoList li button {
+    background-color: transparent;
+    border: none;
+    background-image: url(../img/delete.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    margin-left: 10px;
+}
