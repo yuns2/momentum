@@ -48,7 +48,7 @@ body{
 }
 body{
     width:100%; 
-    height: -webkit-fill-available;
+    height: 100vh;
     justify-content: center;
     background-image: url(https://source.unsplash.com/random);
     background-repeat:no-repeat;
